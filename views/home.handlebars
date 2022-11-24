@@ -1,2 +1,20 @@
-<h1>This is my handle bars home page</h1>
-<p>{{stuff}}</p>
+{{#if error}}
+	There was an error...
+{{/if}}
+<div class="jumbotron">
+  <h1 class="display-4">{{stock.companyName}} ({{stock.symbol}})</h1>
+  <p class="lead"><strong>Current price:</strong>{{stock.latestPrice}}{{stock.currency}}<br/>
+<strong>Percentge Change:</strong>{{stock.changePercent}}<br/>
+<strong>Market Capital:</strong>{{stock.marketCap}}<br/>
+<strong>Previous Close:</strong>{{stock.previousClose}}<br/>
+<strong>52 week high:</strong>{{stock.week52High}}<br/>
+<strong>52 week low:</strong>{{stock.week52Low}}<br/>
+<strong>PE ratio:</strong>{{stock.peRatio}}<br/>
+<strong>Volume:</strong>{{stock.avgTotalVolume}}<br/>
+  
+</div>
+<!--
+{{#each stock}}
+      {{@key}} | {{this}}<br/>
+{{/each}}      
+-->
